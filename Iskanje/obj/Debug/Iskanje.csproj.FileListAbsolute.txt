@@ -1,0 +1,10 @@
+C:\Users\dijak\source\repos\Iskanje\Iskanje\bin\Debug\Iskanje.exe.config
+C:\Users\dijak\source\repos\Iskanje\Iskanje\bin\Debug\Iskanje.exe
+C:\Users\dijak\source\repos\Iskanje\Iskanje\bin\Debug\Iskanje.pdb
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.csprojAssemblyReference.cache
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.Form1.resources
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.Properties.Resources.resources
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.csproj.GenerateResource.cache
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.csproj.CoreCompileInputs.cache
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.exe
+C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.pdb
