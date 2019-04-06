@@ -8,3 +8,13 @@ C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.csproj.GenerateRes
 C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.csproj.CoreCompileInputs.cache
 C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.exe
 C:\Users\dijak\source\repos\Iskanje\Iskanje\obj\Debug\Iskanje.pdb
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\bin\Debug\Iskanje.exe.config
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\bin\Debug\Iskanje.exe
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\bin\Debug\Iskanje.pdb
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.csprojAssemblyReference.cache
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.Form1.resources
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.Properties.Resources.resources
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.csproj.GenerateResource.cache
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.csproj.CoreCompileInputs.cache
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.exe
+C:\Users\izoni\OneDrive\Dokumenti\GitHub\Iskanje\Iskanje\obj\Debug\Iskanje.pdb
