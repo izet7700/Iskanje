@@ -87,6 +87,50 @@ namespace Iskanje
             }
             catch { MessageBox.Show("Error!!!"); }
         }
+
+        private void urediVstButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabela.UrediVstav();
+                MessageBox.Show("Urejeno");
+                outputLabel.Text = tabela.ToString();
+            }
+            catch { MessageBox.Show("Error"); }
+        }
+
+        private void urediIzbButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabela.UrediIzb();
+                MessageBox.Show("Urejeno");
+                outputLabel.Text = tabela.ToString();
+            }
+            catch { MessageBox.Show("Error"); }
+        }
+
+        private void urediMehButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabela.UrediMehurčki();
+                MessageBox.Show("Urejeno");
+                outputLabel.Text = tabela.ToString();
+            }
+            catch { MessageBox.Show("Error"); }
+        }
+
+        private void hitUredButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabela.QuickSort(0, tabela.Dolzina-1);
+                MessageBox.Show("Urejeno");
+                outputLabel.Text = tabela.ToString();
+            }
+            catch { MessageBox.Show("Error"); }
+        }
     }
     public class Tab
     {
@@ -115,7 +159,7 @@ namespace Iskanje
         }
         public override string ToString()
         {
-            string tab="";
+            string tab = "";
             for (int i = 0; i < Dolzina; i++)
             {
                 tab = tab + Tabela[i] + ", ";
@@ -151,13 +195,13 @@ namespace Iskanje
         }
         public float Povprecje()
         {
-            return (float)Vsota() / Dolzina; 
+            return (float)Vsota() / Dolzina;
         }
         public bool VsebujeBinarno(int x)
         {
             bool binVs = false;
-            int min = 0, max = Dolzina-1;
-            while (min <= max) 
+            int min = 0, max = Dolzina - 1;
+            while (min <= max)
             {
                 int mid = (min + max) / 2;
                 if (x > Tabela[mid]) min = mid + 1;
@@ -165,6 +209,98 @@ namespace Iskanje
                 else if (x == Tabela[mid]) return binVs = true;
             }
             return binVs;
+        }
+        public string Uredi()
+        {
+            Array.Sort(Tabela);
+            string urejeno="";
+            foreach (int st in Tabela)
+            {
+                urejeno = urejeno + st + ", ";
+            }
+            return urejeno;
+        }
+        public void UrediVstav()
+        {
+            int val, pre;
+            for(int i=1; i < Dolzina; i++)
+            {
+                val = Tabela[i];
+                pre = 0;
+                for(int j=i-1;j>=0 && pre != 1;)
+                {
+                    if (val < Tabela[j])
+                    {
+                        Tabela[j + 1] = Tabela[j];
+                        j--;
+                        Tabela[j + 1] = val;
+                    }
+                    else pre = 1;
+                }
+            }
+        }
+        public void UrediMehurčki()
+        {
+            int temp, i, j;
+            for (i = 0; i < Dolzina-2; i++)
+            {
+                for (j = 0; j < Dolzina-2; j++)
+                {
+                    if (Tabela[j] > Tabela[j + 1])
+                    {
+                        temp = Tabela[j + 1];
+                        Tabela[j + 1] = Tabela[j];
+                        Tabela[j] = temp;
+                    }
+                }
+            }
+        }
+        public void UrediIzb()
+        {
+            int temp, low;
+            for(int i=0; i < Dolzina - 1; i++)
+            {
+                low = i;
+                for(int j = i + 1; j < Dolzina; j++)
+                {
+                    if (Tabela[j] < Tabela[low]) low = j;
+                }
+                temp = Tabela[low];
+                Tabela[low] = Tabela[i];
+                Tabela[i] = temp;
+            }
+        }
+        public void QuickSort(int left, int right)
+        {
+            if (left < right)
+            {
+                int pivot = Partition(left, right);
+                if (pivot > 1) QuickSort(left, pivot-1);
+                if (pivot + 1 < 1) QuickSort(pivot + 1, right); 
+            }
+        }
+        private int Partition(int left, int right)
+        {
+            int pivot = Tabela[left];
+            while (true)
+            {
+                while (Tabela[left] < pivot)
+                {
+                    left++;
+                }
+                while (Tabela[right] > pivot)
+                {
+                    right--;
+                }
+                if (left < right)
+                {
+                    if (Tabela[left] == Tabela[right]) return right;
+                    int temp = Tabela[left];
+                    Tabela[left] = Tabela[right];
+                    Tabela[right] = temp;
+                }
+                else return right;
+            }
         }
     }
 }

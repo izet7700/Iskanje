@@ -130,6 +130,7 @@
             this.urediIzbButton.TabIndex = 8;
             this.urediIzbButton.Text = "Uredi z izbiranjem";
             this.urediIzbButton.UseVisualStyleBackColor = true;
+            this.urediIzbButton.Click += new System.EventHandler(this.urediIzbButton_Click);
             // 
             // urediMehButton
             // 
@@ -139,6 +140,7 @@
             this.urediMehButton.TabIndex = 9;
             this.urediMehButton.Text = "Uredi z mehurčki";
             this.urediMehButton.UseVisualStyleBackColor = true;
+            this.urediMehButton.Click += new System.EventHandler(this.urediMehButton_Click);
             // 
             // urediVstButton
             // 
@@ -148,6 +150,7 @@
             this.urediVstButton.TabIndex = 11;
             this.urediVstButton.Text = "Uredi z vstavljanjem";
             this.urediVstButton.UseVisualStyleBackColor = true;
+            this.urediVstButton.Click += new System.EventHandler(this.urediVstButton_Click);
             // 
             // hitUredButton
             // 
@@ -155,8 +158,9 @@
             this.hitUredButton.Name = "hitUredButton";
             this.hitUredButton.Size = new System.Drawing.Size(240, 36);
             this.hitUredButton.TabIndex = 12;
-            this.hitUredButton.Text = "Hitno uredi";
+            this.hitUredButton.Text = "Hitro uredi";
             this.hitUredButton.UseVisualStyleBackColor = true;
+            this.hitUredButton.Click += new System.EventHandler(this.hitUredButton_Click);
             // 
             // outputLabel
             // 
