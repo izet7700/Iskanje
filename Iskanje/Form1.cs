@@ -92,7 +92,8 @@ namespace Iskanje
         {
             try
             {
-                tabela.UrediVstav();
+                int x = Convert.ToInt32(vnosTextBox.Text);
+                tabela.UrediVstav(x);
                 MessageBox.Show("Urejeno");
                 outputLabel.Text = tabela.ToString();
             }
@@ -220,8 +221,9 @@ namespace Iskanje
             }
             return urejeno;
         }
-        public void UrediVstav()
+        public void UrediVstav(int x)
         {
+            Dodaj(x);
             int val, pre;
             for(int i=1; i < Dolzina; i++)
             {
@@ -270,37 +272,39 @@ namespace Iskanje
                 Tabela[i] = temp;
             }
         }
-        public void QuickSort(int left, int right)
+        public void QuickSort(int start, int end)
         {
-            if (left < right)
+            if (start >= end)
             {
-                int pivot = Partition(left, right);
-                if (pivot > 1) QuickSort(left, pivot-1);
-                if (pivot + 1 < 1) QuickSort(pivot + 1, right); 
+                return;
             }
-        }
-        private int Partition(int left, int right)
-        {
-            int pivot = Tabela[left];
+            int num = Tabela[start];
+            int i = start - 1;
+            int j = end + 1;
             while (true)
             {
-                while (Tabela[left] < pivot)
+                do
                 {
-                    left++;
-                }
-                while (Tabela[right] > pivot)
+                    i++;
+                } while (Tabela[i] < num);
+
+                do
                 {
-                    right--;
-                }
-                if (left < right)
-                {
-                    if (Tabela[left] == Tabela[right]) return right;
-                    int temp = Tabela[left];
-                    Tabela[left] = Tabela[right];
-                    Tabela[right] = temp;
-                }
-                else return right;
+                    j--;
+                } while (Tabela[j] > num);
+
+                if (i >= j)
+                    break;
+
+                if (i == j)
+                    return;
+                int temp = Tabela[i];
+                Tabela[i] = Tabela[j];
+                Tabela[j] = temp;
             }
+            QuickSort(start, j);
+            QuickSort(j + 1, end);
         }
+       
     }
 }
