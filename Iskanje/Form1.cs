@@ -244,9 +244,9 @@ namespace Iskanje
         public void UrediMehurčki()
         {
             int temp, i, j;
-            for (i = 0; i < Dolzina-2; i++)
+            for (i = 0; i <= Dolzina-2; i++)
             {
-                for (j = 0; j < Dolzina-2; j++)
+                for (j = 0; j <= Dolzina-2; j++)
                 {
                     if (Tabela[j] > Tabela[j + 1])
                     {
@@ -287,15 +287,12 @@ namespace Iskanje
                 {
                     i++;
                 } while (Tabela[i] < num);
-
                 do
                 {
                     j--;
                 } while (Tabela[j] > num);
-
                 if (i >= j)
                     break;
-
                 if (i == j)
                     return;
                 int temp = Tabela[i];
@@ -305,6 +302,5 @@ namespace Iskanje
             QuickSort(start, j);
             QuickSort(j + 1, end);
         }
-       
     }
 }
