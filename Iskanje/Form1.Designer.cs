@@ -201,6 +201,8 @@
             this.Controls.Add(this.vsebujeButton);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.vnosTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iskanje";
