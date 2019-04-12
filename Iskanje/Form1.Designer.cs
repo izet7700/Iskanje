@@ -42,6 +42,7 @@
             this.hitUredButton = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
             this.labOutPanel = new System.Windows.Forms.Panel();
+            this.napolniButton = new System.Windows.Forms.Button();
             this.labOutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,12 +183,23 @@
             this.labOutPanel.Size = new System.Drawing.Size(187, 91);
             this.labOutPanel.TabIndex = 14;
             // 
+            // napolniButton
+            // 
+            this.napolniButton.Location = new System.Drawing.Point(388, 178);
+            this.napolniButton.Name = "napolniButton";
+            this.napolniButton.Size = new System.Drawing.Size(74, 65);
+            this.napolniButton.TabIndex = 15;
+            this.napolniButton.Text = "Napolni";
+            this.napolniButton.UseVisualStyleBackColor = true;
+            this.napolniButton.Click += new System.EventHandler(this.napolniButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(475, 257);
+            this.Controls.Add(this.napolniButton);
             this.Controls.Add(this.labOutPanel);
             this.Controls.Add(this.hitUredButton);
             this.Controls.Add(this.urediVstButton);
@@ -229,6 +241,7 @@
         private System.Windows.Forms.Button hitUredButton;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Panel labOutPanel;
+        private System.Windows.Forms.Button napolniButton;
     }
 }
 

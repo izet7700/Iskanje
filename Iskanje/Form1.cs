@@ -30,6 +30,7 @@ namespace Iskanje
                 MessageBox.Show("Error!!!");
             }
         }
+
         private void vsebujeButton_Click(object sender, EventArgs e)
         {
             try
@@ -93,8 +94,8 @@ namespace Iskanje
             try
             {
                 int x = Convert.ToInt32(vnosTextBox.Text);
-                tabela.UrediVstav(x);
-                MessageBox.Show("Urejeno");
+                float fun = tabela.UrediVstav(x);
+                MessageBox.Show("Urejeno \nMiliseconds: " + fun.ToString());
                 outputLabel.Text = tabela.ToString();
             }
             catch { MessageBox.Show("Error"); }
@@ -115,8 +116,8 @@ namespace Iskanje
         {
             try
             {
-                tabela.UrediMehurčki();
-                MessageBox.Show("Urejeno");
+                float fun = tabela.UrediMehurčki();
+                MessageBox.Show("Urejeno \nMiliseconds: " + fun.ToString());
                 outputLabel.Text = tabela.ToString();
             }
             catch { MessageBox.Show("Error"); }
@@ -132,6 +133,13 @@ namespace Iskanje
             }
             catch { MessageBox.Show("Error"); }
         }
+
+        private void napolniButton_Click(object sender, EventArgs e)
+        {
+            tabela.Napolni();
+            MessageBox.Show("Napolnjeno");
+            outputLabel.Text = tabela.ToString();
+        }
     }
     public class Tab
     {
@@ -139,7 +147,7 @@ namespace Iskanje
         public int Dolzina { get; set; }
         public Tab()
         {
-
+            Dolzina = 0;
         }
         public void Dodaj(int x)
         {
@@ -221,9 +229,10 @@ namespace Iskanje
             }
             return urejeno;
         }
-        public void UrediVstav(int x)
+        public float UrediVstav(int x)
         {
             Dodaj(x);
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             int val, pre;
             for(int i=1; i < Dolzina; i++)
             {
@@ -240,9 +249,12 @@ namespace Iskanje
                     else pre = 1;
                 }
             }
+            watch.Stop();
+            return (float) watch.ElapsedMilliseconds;
         }
-        public void UrediMehurčki()
+        public float UrediMehurčki()
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             int temp, i, j;
             for (i = 0; i <= Dolzina-2; i++)
             {
@@ -256,6 +268,8 @@ namespace Iskanje
                     }
                 }
             }
+            watch.Stop();
+            return (float) watch.ElapsedMilliseconds;
         }
         public void UrediIzb()
         {
@@ -301,6 +315,15 @@ namespace Iskanje
             }
             QuickSort(start, j);
             QuickSort(j + 1, end);
+        }
+        public void Napolni()
+        {
+            Random rand = new Random();
+            for(int i=0; i <= 99; i++)
+            {
+                Tabela[i] = rand.Next(1,1001);
+                Dolzina++;
+            }
         }
     }
 }
