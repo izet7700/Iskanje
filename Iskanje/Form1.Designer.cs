@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.vnosTextBox = new System.Windows.Forms.TextBox();
             this.dodajButton = new System.Windows.Forms.Button();
             this.vsebujeButton = new System.Windows.Forms.Button();
@@ -214,6 +215,7 @@
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.vnosTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
