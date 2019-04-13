@@ -44,7 +44,15 @@
             this.outputLabel = new System.Windows.Forms.Label();
             this.labOutPanel = new System.Windows.Forms.Panel();
             this.napolniButton = new System.Windows.Forms.Button();
+            this.zamenjajGroupBox = new System.Windows.Forms.GroupBox();
+            this.spremButton = new System.Windows.Forms.Button();
+            this.vnosStTextBox = new System.Windows.Forms.TextBox();
+            this.spremLabel = new System.Windows.Forms.Label();
+            this.izpElemLabel = new System.Windows.Forms.Label();
+            this.elementiComboBox = new System.Windows.Forms.ComboBox();
+            this.elementLabel = new System.Windows.Forms.Label();
             this.labOutPanel.SuspendLayout();
+            this.zamenjajGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // vnosTextBox
@@ -66,9 +74,9 @@
             // 
             // vsebujeButton
             // 
-            this.vsebujeButton.Location = new System.Drawing.Point(304, 11);
+            this.vsebujeButton.Location = new System.Drawing.Point(304, 12);
             this.vsebujeButton.Name = "vsebujeButton";
-            this.vsebujeButton.Size = new System.Drawing.Size(75, 35);
+            this.vsebujeButton.Size = new System.Drawing.Size(75, 34);
             this.vsebujeButton.TabIndex = 2;
             this.vsebujeButton.Text = "Vsebuje";
             this.vsebujeButton.UseVisualStyleBackColor = true;
@@ -116,9 +124,9 @@
             // 
             // vsBinarButton
             // 
-            this.vsBinarButton.Location = new System.Drawing.Point(388, 11);
+            this.vsBinarButton.Location = new System.Drawing.Point(385, 63);
             this.vsBinarButton.Name = "vsBinarButton";
-            this.vsBinarButton.Size = new System.Drawing.Size(75, 56);
+            this.vsBinarButton.Size = new System.Drawing.Size(75, 46);
             this.vsBinarButton.TabIndex = 7;
             this.vsBinarButton.Text = "Vsebuje binarno";
             this.vsBinarButton.UseVisualStyleBackColor = true;
@@ -126,9 +134,9 @@
             // 
             // urediIzbButton
             // 
-            this.urediIzbButton.Location = new System.Drawing.Point(388, 73);
+            this.urediIzbButton.Location = new System.Drawing.Point(385, 12);
             this.urediIzbButton.Name = "urediIzbButton";
-            this.urediIzbButton.Size = new System.Drawing.Size(75, 56);
+            this.urediIzbButton.Size = new System.Drawing.Size(75, 45);
             this.urediIzbButton.TabIndex = 8;
             this.urediIzbButton.Text = "Uredi z izbiranjem";
             this.urediIzbButton.UseVisualStyleBackColor = true;
@@ -136,9 +144,9 @@
             // 
             // urediMehButton
             // 
-            this.urediMehButton.Location = new System.Drawing.Point(223, 73);
+            this.urediMehButton.Location = new System.Drawing.Point(304, 52);
             this.urediMehButton.Name = "urediMehButton";
-            this.urediMehButton.Size = new System.Drawing.Size(75, 56);
+            this.urediMehButton.Size = new System.Drawing.Size(75, 47);
             this.urediMehButton.TabIndex = 9;
             this.urediMehButton.Text = "Uredi z mehurčki";
             this.urediMehButton.UseVisualStyleBackColor = true;
@@ -146,9 +154,9 @@
             // 
             // urediVstButton
             // 
-            this.urediVstButton.Location = new System.Drawing.Point(304, 73);
+            this.urediVstButton.Location = new System.Drawing.Point(304, 102);
             this.urediVstButton.Name = "urediVstButton";
-            this.urediVstButton.Size = new System.Drawing.Size(75, 56);
+            this.urediVstButton.Size = new System.Drawing.Size(75, 47);
             this.urediVstButton.TabIndex = 11;
             this.urediVstButton.Text = "Uredi z vstavljanjem";
             this.urediVstButton.UseVisualStyleBackColor = true;
@@ -156,9 +164,9 @@
             // 
             // hitUredButton
             // 
-            this.hitUredButton.Location = new System.Drawing.Point(223, 135);
+            this.hitUredButton.Location = new System.Drawing.Point(385, 113);
             this.hitUredButton.Name = "hitUredButton";
-            this.hitUredButton.Size = new System.Drawing.Size(240, 36);
+            this.hitUredButton.Size = new System.Drawing.Size(75, 36);
             this.hitUredButton.TabIndex = 12;
             this.hitUredButton.Text = "Hitro uredi";
             this.hitUredButton.UseVisualStyleBackColor = true;
@@ -186,13 +194,84 @@
             // 
             // napolniButton
             // 
-            this.napolniButton.Location = new System.Drawing.Point(388, 178);
+            this.napolniButton.Location = new System.Drawing.Point(223, 52);
             this.napolniButton.Name = "napolniButton";
-            this.napolniButton.Size = new System.Drawing.Size(74, 65);
+            this.napolniButton.Size = new System.Drawing.Size(75, 36);
             this.napolniButton.TabIndex = 15;
             this.napolniButton.Text = "Napolni";
             this.napolniButton.UseVisualStyleBackColor = true;
             this.napolniButton.Click += new System.EventHandler(this.napolniButton_Click);
+            // 
+            // zamenjajGroupBox
+            // 
+            this.zamenjajGroupBox.Controls.Add(this.spremButton);
+            this.zamenjajGroupBox.Controls.Add(this.vnosStTextBox);
+            this.zamenjajGroupBox.Controls.Add(this.spremLabel);
+            this.zamenjajGroupBox.Controls.Add(this.izpElemLabel);
+            this.zamenjajGroupBox.Controls.Add(this.elementiComboBox);
+            this.zamenjajGroupBox.Controls.Add(this.elementLabel);
+            this.zamenjajGroupBox.Location = new System.Drawing.Point(223, 152);
+            this.zamenjajGroupBox.Name = "zamenjajGroupBox";
+            this.zamenjajGroupBox.Size = new System.Drawing.Size(240, 91);
+            this.zamenjajGroupBox.TabIndex = 16;
+            this.zamenjajGroupBox.TabStop = false;
+            this.zamenjajGroupBox.Text = "Change";
+            this.zamenjajGroupBox.Visible = false;
+            // 
+            // spremButton
+            // 
+            this.spremButton.Location = new System.Drawing.Point(175, 17);
+            this.spremButton.Name = "spremButton";
+            this.spremButton.Size = new System.Drawing.Size(59, 53);
+            this.spremButton.TabIndex = 5;
+            this.spremButton.Text = "Spremeni";
+            this.spremButton.UseVisualStyleBackColor = true;
+            this.spremButton.Click += new System.EventHandler(this.spremButton_Click);
+            // 
+            // vnosStTextBox
+            // 
+            this.vnosStTextBox.Location = new System.Drawing.Point(76, 50);
+            this.vnosStTextBox.Name = "vnosStTextBox";
+            this.vnosStTextBox.Size = new System.Drawing.Size(60, 20);
+            this.vnosStTextBox.TabIndex = 4;
+            // 
+            // spremLabel
+            // 
+            this.spremLabel.AutoSize = true;
+            this.spremLabel.Location = new System.Drawing.Point(7, 53);
+            this.spremLabel.Name = "spremLabel";
+            this.spremLabel.Size = new System.Drawing.Size(63, 13);
+            this.spremLabel.TabIndex = 3;
+            this.spremLabel.Text = "Spremeni v:";
+            // 
+            // izpElemLabel
+            // 
+            this.izpElemLabel.AutoSize = true;
+            this.izpElemLabel.Location = new System.Drawing.Point(121, 20);
+            this.izpElemLabel.Name = "izpElemLabel";
+            this.izpElemLabel.Size = new System.Drawing.Size(13, 13);
+            this.izpElemLabel.TabIndex = 2;
+            this.izpElemLabel.Text = "0";
+            // 
+            // elementiComboBox
+            // 
+            this.elementiComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.elementiComboBox.FormattingEnabled = true;
+            this.elementiComboBox.Location = new System.Drawing.Point(61, 17);
+            this.elementiComboBox.Name = "elementiComboBox";
+            this.elementiComboBox.Size = new System.Drawing.Size(54, 21);
+            this.elementiComboBox.TabIndex = 1;
+            this.elementiComboBox.SelectedIndexChanged += new System.EventHandler(this.elementiComboBox_SelectedIndexChanged);
+            this.elementiComboBox.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
+            // elementLabel
+            // 
+            this.elementLabel.AutoSize = true;
+            this.elementLabel.Location = new System.Drawing.Point(7, 20);
+            this.elementLabel.Name = "elementLabel";
+            this.elementLabel.Size = new System.Drawing.Size(48, 13);
+            this.elementLabel.TabIndex = 0;
+            this.elementLabel.Text = "Element:";
             // 
             // Form1
             // 
@@ -200,6 +279,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(475, 257);
+            this.Controls.Add(this.zamenjajGroupBox);
             this.Controls.Add(this.napolniButton);
             this.Controls.Add(this.labOutPanel);
             this.Controls.Add(this.hitUredButton);
@@ -222,6 +302,8 @@
             this.Text = "Iskanje";
             this.labOutPanel.ResumeLayout(false);
             this.labOutPanel.PerformLayout();
+            this.zamenjajGroupBox.ResumeLayout(false);
+            this.zamenjajGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +326,13 @@
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Panel labOutPanel;
         private System.Windows.Forms.Button napolniButton;
+        private System.Windows.Forms.GroupBox zamenjajGroupBox;
+        private System.Windows.Forms.Button spremButton;
+        private System.Windows.Forms.TextBox vnosStTextBox;
+        private System.Windows.Forms.Label spremLabel;
+        private System.Windows.Forms.Label izpElemLabel;
+        private System.Windows.Forms.ComboBox elementiComboBox;
+        private System.Windows.Forms.Label elementLabel;
     }
 }
 

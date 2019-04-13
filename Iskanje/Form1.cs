@@ -24,6 +24,7 @@ namespace Iskanje
                 int x = Convert.ToInt32(vnosTextBox.Text);
                 tabela.Dodaj(x);
                 outputLabel.Text = tabela.ToString();
+                zamenjajGroupBox.Visible = true;
             }
             catch
             {
@@ -139,9 +140,45 @@ namespace Iskanje
 
         private void napolniButton_Click(object sender, EventArgs e)
         {
-            tabela.Napolni();
-            MessageBox.Show("Napolnjeno");
-            outputLabel.Text = tabela.ToString();
+            try
+            {
+                tabela.Napolni();
+                MessageBox.Show("Napolnjeno");
+                outputLabel.Text = tabela.ToString();
+                zamenjajGroupBox.Visible = true;
+                elementiComboBox.Items.Clear();
+                for (int i = tabela.Dolzina - 1; i >= 0; i--)
+                {
+                    elementiComboBox.Items.Add(i);
+                }
+            }
+            catch { MessageBox.Show("Error"); }
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void elementiComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int st = tabela.vrniElem(Convert.ToInt32(elementiComboBox.SelectedItem));
+                izpElemLabel.Text = st.ToString();
+            }
+            catch { MessageBox.Show("Error"); }
+        }
+
+        private void spremButton_Click(object sender, EventArgs e)
+        {
+            try {
+                int vrstni = Convert.ToInt32(elementiComboBox.SelectedItem);
+                int novi = Convert.ToInt32(vnosStTextBox.Text);
+                tabela.Change(vrstni, novi);
+                outputLabel.Text = tabela.ToString();
+                MessageBox.Show("Replaced!");
+            }
+            catch { MessageBox.Show("Error");}
         }
     }
     public class Tab
@@ -336,6 +373,14 @@ namespace Iskanje
                     Dolzina++;
                 }
             }
+        }
+        public int vrniElem(int x)
+        {
+            return Tabela[x];
+        }
+        public void Change(int st, int New)
+        {
+            Tabela[st] = New;
         }
     }
 }
